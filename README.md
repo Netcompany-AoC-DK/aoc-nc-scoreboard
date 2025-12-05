@@ -2,7 +2,7 @@
 This script/repo/tool does follow the automation guidelines on the [/r/adventofcode community wiki](https://www.reddit.com/r/adventofcode/wiki/faqs/automation)
 
 ## Outbound calls
-Outbound calls are to https://adventofcode.com/2024/leaderboard/private/view/2252784.json at minute 30 past hour 5, 6, 7, 11, and 15 UTC, every day in december. (see .github/workflows/main.yml under on -> schedule -> cron)
+Outbound calls are to https://adventofcode.com/2025/leaderboard/private/view/2252784.json at minute 30 past hour 5, 6, 7, 11, and 15 UTC, every day in december. (see .github/workflows/main.yml under on -> schedule -> cron)
 
 Calls are also made at each merge of a pull request, which is not very often.
 

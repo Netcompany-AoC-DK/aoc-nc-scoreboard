@@ -13,8 +13,8 @@ const hourInS = 60*60;
 const minuteInMs = 1000*60;
 const minuteInS = 60;
 const secondInMs = 1000;
-let days = new Array(25).fill(false);
-let lastDayOfAoC = new Date(2024, 11, 25);
+let days = new Array(12).fill(false);
+let lastDayOfAoC = new Date(2025, 11, 12);
 let curDate = new Date();
 let curDay = new Date(Math.min(+lastDayOfAoC, +curDate)).getDate()
 const numEnabledDays = curDay;
@@ -48,9 +48,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>
-          <span>Netcompany - AoC 2024</span>
+          <span>Netcompany - AoC 2025</span>
           <br />
-          <a href="https://afterdark.netcompany.com/event/advent-of-code-2024/">AfterDark</a>
+          <a href="https://afterdark.netcompany.com/event/advent-of-code-2025/">AfterDark</a>
         </h1>
       </header>
       <div className="privboard-row">
@@ -200,7 +200,7 @@ function totalTimeCompare(playerA: any, playerB: any, day: string) {
   let a = 0;
   let b = 0;
   for (let i = 1; i <= +day; i++) {
-    const date0S = new Date(2024, 11, i, 6, 0, 0, 0).getTime()/1000;
+    const date0S = new Date(2025, 11, i, 6, 0, 0, 0).getTime()/1000;
     a+=getNthStarTs(playerA[1], 2, i.toString())-date0S;
     b+=getNthStarTs(playerB[1], 2, i.toString())-date0S;
   }
@@ -283,7 +283,7 @@ function renderUnixTimestamp(ts: number, day: string): string {
   }
   // Create a new JavaScript Date object based on the timestamp
   // multiplied by 1000 so that the argument is in milliseconds, not seconds.
-  const date0Ms = new Date(2024, 11, parseInt(day), 6, 0, 0, 0).getTime();
+  const date0Ms = new Date(2025, 11, parseInt(day), 6, 0, 0, 0).getTime();
   const finishTime = new Date(ts * 1000).getTime();
   const diff = finishTime - date0Ms;
 
@@ -313,7 +313,7 @@ function renderPlayerTime(player: any, selectedDay: string, highscoreType: Highs
   } else if (highscoreType === HighscoreType.TotalTime) {
     let total = 0;
     for (let i = 1; i <= +selectedDay; i++) {
-      const date0S = new Date(2024, 11, i, 6, 0, 0, 0).getTime()/1000;
+      const date0S = new Date(2025, 11, i, 6, 0, 0, 0).getTime()/1000;
       total += getNthStarTs(player, 2, ''+i) - date0S;
     }
     if (isNaN(total)) {
